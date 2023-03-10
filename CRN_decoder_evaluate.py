@@ -49,7 +49,7 @@ def fit_CRN_decoder(dataset_train, dataset_val, model_name, model_dir,
 
             logging.info("Current hyperparams used for training \n {}".format(hyperparams))
             model = CRN_Model(params, hyperparams, b_train_decoder=True)
-            model.train(dataset_train, dataset_val, model_name, model_dir)
+            model.train(dawtaset_train, dataset_val, model_name, model_dir)
             validation_mse, _ = model.evaluate_predictions(dataset_val)
 
             if (validation_mse < best_validation_mse):
